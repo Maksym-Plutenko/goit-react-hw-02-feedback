@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import countTotalFeedback from '../../utils/countTotalFeedback';
+import countPositiveFeedbackPercentage from '../../utils/countPositiveFeedbackPercentage';
+
 class Section extends Component {
   state = {
     good: 0,
@@ -44,6 +47,8 @@ class Section extends Component {
         <p>Good: {this.state.good}</p>
         <p>Neutral: {this.state.neutral}</p>
         <p>Bad: {this.state.bad}</p>
+        <p>Total: {countTotalFeedback(this.state)}</p>
+        <p>Positive feedback: {countPositiveFeedbackPercentage(this.state)} %</p>
       </ul>
     </section>
   );

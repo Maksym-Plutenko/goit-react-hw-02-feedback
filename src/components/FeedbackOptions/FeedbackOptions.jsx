@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 
-// FeedbackOptions
-
 const FeedbackOptions = ({onLeaveFeedback}) => (
   <ul>
     <li>
@@ -15,5 +13,9 @@ const FeedbackOptions = ({onLeaveFeedback}) => (
     </li>
   </ul>
 );
+
+FeedbackOptions.propTypes = {
+    onLeaveFeedback: PropTypes.func.isRequired,
+}
 
 export {FeedbackOptions};

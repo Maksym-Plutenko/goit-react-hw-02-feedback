@@ -3,4 +3,4 @@ const countPositiveFeedbackPercentage = function({good, neutral, bad}) {
     return result || 0;
 }
 
-export default countPositiveFeedbackPercentage;
+export {countPositiveFeedbackPercentage};

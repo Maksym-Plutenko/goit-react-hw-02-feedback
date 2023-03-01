@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import css from './Section.module.css';
+
 // import React, { Component } from 'react';
 
 // import {countTotalFeedback} from '../../utils/countTotalFeedback';
@@ -58,7 +60,7 @@ import PropTypes from 'prop-types';
 
 const Section = ({ title, children }) => (
   <>
-    <h2>{title}</h2>
+    <h2 className={css.title}>{title}</h2>
     {children}
   </>
 );

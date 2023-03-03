@@ -16,21 +16,11 @@ class App extends Component {
   };
 
   onLeaveFeedback = event => {
-    const eventText = event.currentTarget.textContent;
+    const eventTag = event.currentTarget.textContent.toLowerCase();
 
-    if (eventText === 'Good') {
-      this.setState(prevState => {
-        return { good: prevState.good + 1 };
-      });
-    } else if (eventText === 'Neutral') {
-      this.setState(prevState => {
-        return { neutral: prevState.neutral + 1 };
-      });
-    } else if (eventText === 'Bad') {
-      this.setState(prevState => {
-        return { bad: prevState.bad + 1 };
-      });
-    }
+    this.setState(prevState => {
+      return { [eventTag]: prevState[eventTag] + 1 };
+    });
   };
 
   render = () => {
